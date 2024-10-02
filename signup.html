@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Connect - Sign In</title>
+    <title>Volunteer Connect - Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -93,20 +93,6 @@
             color: #555;
         }
 
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .checkbox-group input {
-            margin-right: 8px;
-        }
-
-        .checkbox-group label {
-            color: #333;
-        }
-
         .sign-in-btn {
             background-color: #4CAF50;
             color: white;
@@ -124,37 +110,33 @@
         }
 
         .btn-link {
-  text-decoration: none; /* Removes underline */
-  color: inherit; /* Inherits the color from the parent button */
-}
-
+            text-decoration: none; /* Removes underline */
+            color: inherit; /* Inherits the color from the parent button */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sign-in-box">
             <h1 class="logo">VC</h1>
-            <h2>Sign In</h2>
-            <form id="signInForm">
+            <h2>Sign Up</h2>
+            <form id="signUpForm" action="signup.php" method="POST">
                 <div class="input-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" required>
+                    <input type="text" id="username" name="username" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
                     <div class="password-wrapper">
-                        <input type="password" id="password" required>
+                        <input type="password" id="password" name="password" required>
                         <span id="togglePassword" class="toggle-password">
                             <i class="fas fa-eye"></i>
                         </span>
                     </div>
                 </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="rememberMe">
-                    <label for="rememberMe">Remember me</label>
-                </div>
-                <button type="submit" class="sign-in-btn"><a href="./profile.html" class="btn-link">Sign Up</a></button>
+                <button type="submit" class="sign-in-btn">Sign Up</button>
             </form>
+            <p>Already have an account? <a href="login.html" class="btn-link"><u>Log in<u></a></p>
         </div>
     </div>
     <script>
